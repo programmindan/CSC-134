@@ -13,11 +13,11 @@ using namespace std;
 int main() {
 	
 // Variables for cheer program
-	string LETS_GO = "Let's go ";													// Variable for cheer
+	string LETS_GO = "Let's go ";														// Variable for cheer
 	string school = "FTCC";															// Variable for school name
 	string team = "Trojans";														// Variable for school team name
-	string CHEER_ONE = LETS_GO + school;											// Variable for cheer one output
-	string CHEER_TWO = LETS_GO + team;												// Variable for cheer two output
+	string CHEER_ONE = LETS_GO + school;													// Variable for cheer one output
+	string CHEER_TWO = LETS_GO + team;													// Variable for cheer two output
 
 
 // Cheer output to user
