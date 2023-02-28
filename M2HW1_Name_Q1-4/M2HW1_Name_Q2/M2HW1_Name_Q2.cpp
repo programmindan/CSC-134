@@ -18,16 +18,16 @@ int main(){
 
 // Dimension & area variables
 double length;																					// Lenght input from user in ft
-double width;																					// Width input from user in ft
+double width;																					  // Width input from user in ft
 double height;																					// Height input from user in ft
 double volume;																					// Volume = L * W * H in cubic ft
 
 // Cost & profit variables
 double WHOLESALE_PRICE;																			// Cost to produce crate in $
-double RETAIL_PRICE;																			// Price crate is sold at in $
-double profit;																					// Profit from crate sold in $
+double RETAIL_PRICE;																			  // Price crate is sold at in $
+double profit;																					    // Profit from crate sold in $
 const double WHOLESALE_PRICE_PER_CUBICFT = 0.30;												// Wholesale price of crate material in $ per cubic ft
-const double RETAIL_PRICE_PER_CUBICFT = 0.52;													// Retail price of crate material in $ per cubic ft
+const double RETAIL_PRICE_PER_CUBICFT = 0.52;													  // Retail price of crate material in $ per cubic ft
 
 cout << setprecision(2) << fixed << showpoint;													// Sets outputs to two decimal places
 
@@ -36,7 +36,7 @@ cout << "Enter the crate dimensions in feet: \n";
 cout << "Lenght: ";
 cin >> length;																					// User input for length in ft
 cout << "Width: ";
-cin >> width;																					// User input for width in ft
+cin >> width;																					  // User input for width in ft
 cout << "Height: ";
 cin >> height;																					// User input for height in ft
 
@@ -44,7 +44,7 @@ cin >> height;																					// User input for height in ft
 volume = length * width * height;
 
 // Volume information output to user
-cout << "The volume of the crate is " << volume;												// Volume display
+cout << "The volume of the crate is " << volume;												    // Volume display
 cout << " cubic feet.\n";
 
 // Production cost calculation
