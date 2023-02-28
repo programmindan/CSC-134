@@ -14,8 +14,8 @@ using namespace std;
 int main() {
 
 	// Variables for remaining pizza slices calculation
-	double SLICES_PER_GUEST = 3;											// Variable for slices per guest
-	double guest;															// Variable for number of guest
+	double SLICES_PER_GUEST = 3;												// Variable for slices per guest
+	double guest;														// Variable for number of guest
 	double PIZZAS_ORDERED;													// Variable for pizzas ordered
 	double SLICES_PER_PIZZA;												// Variable for slices per pizza
 	double TOTAL_SLICES;													// Variable for total pizza slices
@@ -24,13 +24,13 @@ int main() {
 
 	// Information input from user for calculation
 	cout << "This program's calculation is based on each guest receiving ";
-	cout << SLICES_PER_GUEST << " slices of pizza.\n";						// Displays slices per guest
+	cout << SLICES_PER_GUEST << " slices of pizza.\n";									// Displays slices per guest
 	cout << "Total pizzas ordered: ";
 	cin >> PIZZAS_ORDERED;													// User input for pizzas ordered
 	cout << "Slices per pizza: ";				
 	cin >> SLICES_PER_PIZZA;												// User input for slices per pizza
 	cout << "Guest attending party; ";
-	cin >> guest;															// User input for # guest attending party
+	cin >> guest;														// User input for # guest attending party
 
 	// Calculation for slices remaining
 	TOTAL_SLICES = PIZZAS_ORDERED * SLICES_PER_PIZZA;
@@ -38,7 +38,7 @@ int main() {
 	SLICES_REMAINING = TOTAL_SLICES - TOTAL_SLICES_NEEDED;
 
 	// Information output to user on slices remaining
-	cout << "Total slices remaining: " << SLICES_REMAINING;					// Output to user for slices remaining
+	cout << "Total slices remaining: " << SLICES_REMAINING;									// Output to user for slices remaining
 
 	return 0;
 }
