@@ -6,8 +6,8 @@
 // for Thudd
 
 #include <iostream>
-#include <cstdlib>                                              // Enables rand(), and srand()
-#include <ctime>                                                // Enables time function
+#include <cstdlib>                                                  // Enables rand(), and srand()
+#include <ctime>                                                    // Enables time function
 
 using namespace std;
 
@@ -29,24 +29,61 @@ void option_one() {
 }
 void option_two() {
     // Dice roller
-    int d6_1, d6_2, d6_3;                                   // 3 dice (6 sided)
-    int total;                                              // 3d6
+    int d6_1, d6_2, d6_3;                                           // 3 dice (6 sided)
+    int total;                                                      // 3d6
     int seed;
     seed = time(0);
     srand(seed);
 
     // Roll the dice
-    d6_1 = (rand() % 6) + 1;                                // 0-5, then add one
-    d6_2 = (rand() % 6) + 1;                                // 0-5, then add one
-    d6_3 = (rand() % 6) + 1;                                // 0-5, then add one
+    d6_1 = (rand() % 6) + 1;                                        // 0-5, then add one
+    d6_2 = (rand() % 6) + 1;                                        // 0-5, then add one
+    d6_3 = (rand() % 6) + 1;                                        // 0-5, then add one
     total = d6_1 + d6_2 + d6_3;
     cout << "Rolling 3d6: ";
-    cout << d6_1 << " + " << d6_2 << " + " << d6_3;         // Shows value for each dice roll
-    cout << " = " << total << endl;                         // Display total
+    cout << d6_1 << " + " << d6_2 << " + " << d6_3;                 // Shows value for each dice roll
+    cout << " = " << total << endl;                                 // Display total
 }
 void option_three() {
     // Sum and average of dice
-}
+    // Roll 3d6, six times
+    // Find the sum and average
+    // TODO: reroll if it's not high enough (average <9)
+    int total = 0;
+    int d6_1, d6_2, d6_3;                                           // 3 dice (6 sided)
+    int roll;                                                       // 3d6 (one stat roll)
+    int seed = time(0);
+    srand(seed);
+
+    for (int i = 1; i <= 6; i++) {
+        // Roll dice
+        d6_1 = (rand() % 6) + 1;                                    // 0-5, then add one
+        d6_2 = (rand() % 6) + 1;                                    // 0-5, then add one
+        d6_3 = (rand() % 6) + 1;                                    // 0-5, then add one
+        roll = d6_1 + d6_2 + d6_3;
+        // Print results
+        cout << "Roll #: " << i << ": ";
+        cout << d6_1 << " + " << d6_2 << " + " << d6_3;             // Shows value for each dice roll
+        cout << " = " << roll << endl;                              // Display total
+
+        // Add to the total
+        total += roll;
+    }
+
+    // Print the total
+    cout << "Total of all stats: " << total << endl;
+
+    int average = total / 6;
+    cout << "Average roll = " << average << endl;
+    if (average <=9) {
+        cout << "Low stats, you can reroll" << endl;
+    }
+    else {
+        cout << "A playable character! Good luck." << endl;
+    }
+
+    }
+
 
 // There is no option 4 function, it's just quit.
 
